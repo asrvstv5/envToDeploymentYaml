@@ -3,8 +3,8 @@ Python Script to convert .env files to a deployment yaml
 
 ## How to Install
 
-With the latest version of pip installed, simply perform the following :
-pip install envyamlconverter=0.1 
+With the latest version of pip installed, simply perform the following : <br>
+`pip install envyamlconverter=0.1 `
 
 ## How to Use 
 
