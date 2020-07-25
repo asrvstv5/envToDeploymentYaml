@@ -1,11 +1,12 @@
 class envYamlConverter:
     
-    def __init__(self, appName, namespace, secretsName, fileName, image):
+    def __init__(self, appName, namespace, secretsName, fileName, ipsName, image):
         self.appName = appName
         self.namespace = namespace
         self.image = image
         self.secretsName = secretsName
         self.fileName = fileName
+        self.ipsName = ipsName
         return
 
     def convertToYaml(self, envList, secretsList):
@@ -54,7 +55,7 @@ class envYamlConverter:
                 f.write("                  name: "+self.secretsName+"\n")
                 f.write("                  key: "+envName.lower()+"\n")
         f.write("      imagePullSecrets:\n")
-        f.write("        - name: acr-scepter-ips\n")
+        f.write("        - name: "+self.ipsName+"\n")
         f.close()
         return
 
