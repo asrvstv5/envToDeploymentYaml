@@ -32,7 +32,7 @@ class envYamlConverter:
             "        app: "+self.appName+"\n"
             "    spec:\n"
             "      containers:\n"
-            "        - name: orchestrator-worker\n"
+            "        - name: "+self.appName+"\n"
             "          image: "+self.image+"\n"
             "          imagePullPolicy: Always\n"
             "          env:\n"
